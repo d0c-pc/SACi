@@ -23,7 +23,7 @@ class Chat extends React.Component {
 
   waitForSocketConnection(callback) {
     const component = this;
-    setTimeout(function() {
+    setTimeout(function () {
       if (WebSocketInstance.state() === 1) {
         console.log("Connection is made");
         callback();
@@ -82,7 +82,7 @@ class Chat extends React.Component {
         className={message.author === currentUser ? "sent" : "replies"}
       >
         <img
-          src="http://emilcarlsson.se/assets/mikeross.png"
+          src="https://www.iconfinder.com/data/icons/social-messaging-ui-color-and-shapes-3/177800/129-512.png"
           alt="profile-pic"
         />
         <p>

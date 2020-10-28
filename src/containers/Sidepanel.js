@@ -15,7 +15,7 @@ class Sidepanel extends React.Component {
 
   waitForAuthDetails() {
     const component = this;
-    setTimeout(function() {
+    setTimeout(function () {
       if (
         component.props.token !== null &&
         component.props.token !== undefined
@@ -26,7 +26,7 @@ class Sidepanel extends React.Component {
         );
         return;
       } else {
-        console.log("waiting for authentication details...");
+        console.log("esperando a autenticação...");
         component.waitForAuthDetails();
       }
     }, 100);
@@ -63,8 +63,8 @@ class Sidepanel extends React.Component {
       return (
         <Contact
           key={c.id}
-          name="Harvey Specter"
-          picURL="http://emilcarlsson.se/assets/louislitt.png"
+          name="contat"
+          picURL="https://www.iconfinder.com/data/icons/social-messaging-ui-color-and-shapes-3/177800/129-512.png"
           status="busy"
           chatURL={`/${c.id}`}
         />
@@ -74,13 +74,14 @@ class Sidepanel extends React.Component {
       <div id="sidepanel">
         <div id="profile">
           <div className="wrap">
-            <img
+            {/* <img
               id="profile-img"
-              src="http://emilcarlsson.se/assets/mikeross.png"
+              src="https://www.iconfinder.com/data/icons/social-messaging-ui-color-and-shapes-3/177800/129-512.png"
               className="online"
               alt=""
-            />
-            <p>Mike Ross</p>
+            /> */}
+            <h3>SACi</h3>
+            <p></p>
             <i
               className="fa fa-chevron-down expand-button"
               aria-hidden="true"
@@ -109,48 +110,48 @@ class Sidepanel extends React.Component {
                   <span>Logout</span>
                 </button>
               ) : (
-                <div>
-                  <form method="POST" onSubmit={this.authenticate}>
-                    {this.state.loginForm ? (
-                      <div>
-                        <input
-                          name="username"
-                          type="text"
-                          placeholder="username"
-                        />
-                        <input
-                          name="password"
-                          type="password"
-                          placeholder="password"
-                        />
-                      </div>
-                    ) : (
-                      <div>
-                        <input
-                          name="username"
-                          type="text"
-                          placeholder="username"
-                        />
-                        <input name="email" type="email" placeholder="email" />
-                        <input
-                          name="password"
-                          type="password"
-                          placeholder="password"
-                        />
-                        <input
-                          name="password2"
-                          type="password"
-                          placeholder="password confirm"
-                        />
-                      </div>
-                    )}
+                    <div>
+                      <form method="POST" onSubmit={this.authenticate}>
+                        {this.state.loginForm ? (
+                          <div>
+                            <input
+                              name="username"
+                              type="text"
+                              placeholder="username"
+                            />
+                            <input
+                              name="password"
+                              type="password"
+                              placeholder="password"
+                            />
+                          </div>
+                        ) : (
+                            <div>
+                              <input
+                                name="username"
+                                type="text"
+                                placeholder="username"
+                              />
+                              <input name="email" type="email" placeholder="email" />
+                              <input
+                                name="password"
+                                type="password"
+                                placeholder="password"
+                              />
+                              <input
+                                name="password2"
+                                type="password"
+                                placeholder="password confirm"
+                              />
+                            </div>
+                          )}
 
-                    <button type="submit">Authenticate</button>
-                  </form>
+                        <button type="submit">Authenticate</button>
+                      </form>
 
-                  <button onClick={this.changeForm}>Switch</button>
-                </div>
-              )}
+                      <button onClick={this.changeForm}>Switch</button>
+                    </div>
+                  )}
             </div>
           </div>
         </div>
