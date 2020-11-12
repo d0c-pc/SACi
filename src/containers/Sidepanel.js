@@ -82,10 +82,7 @@ class Sidepanel extends React.Component {
             /> */}
             <h3>SACi</h3>
             <p></p>
-            <i
-              className="fa fa-chevron-down expand-button"
-              aria-hidden="true"
-            />
+
             <div id="status-options">
               <ul>
                 <li id="status-online" className="active">
